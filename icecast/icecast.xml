@@ -14,10 +14,10 @@
   </limits>
 
   <authentication>
-    <source-password>radiomasam2020</source-password>
-    <relay-password>radiomasam2020</relay-password>
+    <source-password>change-me-source</source-password>
+    <relay-password>change-me-relay</relay-password>
     <admin-user>admin</admin-user>
-    <admin-password>radiomasam2020</admin-password>
+    <admin-password>change-me-admin</admin-password>
   </authentication>
 
   <hostname>internal-dc</hostname>

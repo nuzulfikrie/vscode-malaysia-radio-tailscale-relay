@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -21,7 +22,7 @@ echo "Mount:  ${MOUNT_PATH}"
 exec ffmpeg \
   -hide_banner \
   -loglevel warning \
-  -allowed_extensions ALL \
+  -user_agent "Mozilla/5.0 (compatible; ffmpeg)" \
   -reconnect 1 \
   -reconnect_streamed 1 \
   -reconnect_on_network_error 1 \
@@ -36,3 +37,5 @@ exec ffmpeg \
   -f "${AUDIO_FORMAT}" \
   -ice_name "${STATION_NAME}" \
   "icecast://${ICECAST_USER}:${ICECAST_SOURCE_PASSWORD}@${ICECAST_HOST}:${ICECAST_PORT}${MOUNT_PATH}"
+
+
