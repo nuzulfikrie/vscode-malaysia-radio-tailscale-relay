@@ -14,13 +14,13 @@
   </limits>
 
   <authentication>
-    <source-password>change-me-source</source-password>
-    <relay-password>change-me-relay</relay-password>
+    <source-password>radiomasam2020</source-password>
+    <relay-password>radiomasam2020</relay-password>
     <admin-user>admin</admin-user>
-    <admin-password>change-me-admin</admin-password>
+    <admin-password>radiomasam2020</admin-password>
   </authentication>
 
-  <hostname>localhost</hostname>
+  <hostname>internal-dc</hostname>
 
   <listen-socket>
     <port>8000</port>
