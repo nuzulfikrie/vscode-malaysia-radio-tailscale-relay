@@ -1,0 +1,9 @@
+FROM jrottenberg/ffmpeg:7.1-alpine
+
+RUN apk add --no-cache bash procps
+
+COPY manager-entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["start", "all"]
