@@ -22,7 +22,6 @@ exec ffmpeg \
   -hide_banner \
   -loglevel warning \
   -user_agent "Mozilla/5.0 (compatible; ffmpeg)" \
-  -follow_redirects 1 \
   -reconnect 1 \
   -reconnect_streamed 1 \
   -reconnect_on_network_error 1 \
