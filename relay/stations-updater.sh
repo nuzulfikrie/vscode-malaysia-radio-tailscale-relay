@@ -397,6 +397,30 @@ clean_old_backups() {
     fi
 }
 
+# Capture AudioPlus streams (requires Playwright)
+capture_audioplus() {
+    local python_script="${SCRIPT_DIR}/capture_audioplus_streams.py"
+    
+    if [[ ! -f "${python_script}" ]]; then
+        log_error "capture_audioplus_streams.py not found"
+        log_info "Please ensure the file exists: ${python_script}"
+        return 1
+    fi
+    
+    log_info "Launching AudioPlus stream capture..."
+    log_info "This requires Playwright browser automation."
+    log_info ""
+    
+    if command -v python3 &> /dev/null; then
+        python3 "${python_script}" "$@"
+    elif command -v python &> /dev/null; then
+        python "${python_script}" "$@"
+    else
+        log_error "Python not found"
+        return 1
+    fi
+}
+
 # Show help
 show_help() {
     cat << 'EOF'
@@ -413,15 +437,21 @@ Options:
     --backup, -b       Create backup of current station configs
     --clear-cache      Clear the API response cache
     --clean            Clean old backups (keep last 10)
+    --capture-audioplus Capture AudioPlus streams (requires Playwright)
     --help, -h         Show this help message
 
 Examples:
-    ./stations-updater.sh --update      # Update all stations from API
-    ./stations-updater.sh --fetch-all   # See what's available
-    ./stations-updater.sh --verify    # Check if streams work
+    ./stations-updater.sh --update          Update all stations from API
+    ./stations-updater.sh --fetch-all       See what's available
+    ./stations-updater.sh --verify          Check if streams work
+    ./stations-updater.sh --capture-audioplus  Capture dynamic AudioPlus URLs
 
 Note: This script fetches live station data from radio-browser.info
 with 1-hour caching. Use --clear-cache to force fresh fetch.
+
+AudioPlus Capture: Some stations (Hot FM, Kool FM, etc.) use dynamic
+URLs that require browser automation. Use --capture-audioplus on your
+local machine with Playwright installed.
 
 EOF
 }
@@ -450,6 +480,9 @@ main() {
             ;;
         --clean)
             clean_old_backups
+            ;;
+        --capture-audioplus)
+            capture_audioplus "${@:2}"
             ;;
         --help|-h)
             show_help
