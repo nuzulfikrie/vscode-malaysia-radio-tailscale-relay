@@ -17,8 +17,9 @@ venv/
 .venv/
 pip-log.txt
 
-# IDE
-.vscode/
+# IDE (except .vscode/settings.json)
+.vscode/*
+!.vscode/settings.json
 .idea/
 *.swp
 *.swo
