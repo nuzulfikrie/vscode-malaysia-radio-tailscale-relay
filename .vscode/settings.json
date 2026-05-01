@@ -1,0 +1,164 @@
+{
+    "radioPlayer.customStations": [
+        {
+            "name": "988 FM",
+            "url": "http://internal-dc:8000/988.mp3"
+        },
+        {
+            "name": "ai fm",
+            "url": "http://internal-dc:8000/ai.mp3"
+        },
+        {
+            "name": "Asyik FM",
+            "url": "http://internal-dc:8000/asyik.mp3"
+        },
+        {
+            "name": "BFM 89.9",
+            "url": "http://internal-dc:8000/bfm.mp3"
+        },
+        {
+            "name": "Ceritera FM",
+            "url": "http://internal-dc:8000/ceritera.mp3"
+        },
+        {
+            "name": "CITYPlus FM",
+            "url": "http://internal-dc:8000/cityplus.mp3"
+        },
+        {
+            "name": "Delima FM",
+            "url": "http://internal-dc:8000/delima.mp3"
+        },
+        {
+            "name": "era sarawak",
+            "url": "http://internal-dc:8000/era-sarawak.mp3"
+        },
+        {
+            "name": "ERA FM",
+            "url": "http://internal-dc:8000/era.mp3"
+        },
+        {
+            "name": "Fly FM",
+            "url": "http://internal-dc:8000/fly.mp3"
+        },
+        {
+            "name": "THR Gegar Pilihan #1 Pantai Timur",
+            "url": "http://internal-dc:8000/gegar.mp3"
+        },
+        {
+            "name": "HITZ",
+            "url": "http://internal-dc:8000/hitz.mp3"
+        },
+        {
+            "name": "HOT FM",
+            "url": "http://internal-dc:8000/hot.mp3"
+        },
+        {
+            "name": "IKIM FM",
+            "url": "http://internal-dc:8000/ikim.mp3"
+        },
+        {
+            "name": "Ikimfm",
+            "url": "http://internal-dc:8000/ikimfm.mp3"
+        },
+        {
+            "name": "ILA FM",
+            "url": "http://internal-dc:8000/ila.mp3"
+        },
+        {
+            "name": "JEI FM",
+            "url": "http://internal-dc:8000/jei.mp3"
+        },
+        {
+            "name": "Kelantan FM",
+            "url": "http://internal-dc:8000/kelantan.mp3"
+        },
+        {
+            "name": "Keningau FM",
+            "url": "http://internal-dc:8000/keningau.mp3"
+        },
+        {
+            "name": "Klasik FM 101,1 MHz",
+            "url": "http://internal-dc:8000/klasik.mp3"
+        },
+        {
+            "name": "Langkawi FM",
+            "url": "http://internal-dc:8000/langkawi.mp3"
+        },
+        {
+            "name": "LITE FM Malaysia",
+            "url": "http://internal-dc:8000/lite.mp3"
+        },
+        {
+            "name": "Melody FM Malaysia",
+            "url": "http://internal-dc:8000/melody.mp3"
+        },
+        {
+            "name": "MIX 94.5 FM Malaysia",
+            "url": "http://internal-dc:8000/mix.mp3"
+        },
+        {
+            "name": "MY FM",
+            "url": "http://internal-dc:8000/my.mp3"
+        },
+        {
+            "name": "Nasheed FM",
+            "url": "http://internal-dc:8000/nasheed.mp3"
+        },
+        {
+            "name": "Nasional FM 88,5 MHz",
+            "url": "http://internal-dc:8000/nasional.mp3"
+        },
+        {
+            "name": "Pahang FM",
+            "url": "http://internal-dc:8000/pahang.mp3"
+        },
+        {
+            "name": "Raaga",
+            "url": "http://internal-dc:8000/raaga.mp3"
+        },
+        {
+            "name": "Sabah FM",
+            "url": "http://internal-dc:8000/sabah.mp3"
+        },
+        {
+            "name": "Sinar FM",
+            "url": "http://internal-dc:8000/sinar.mp3"
+        },
+        {
+            "name": "SkyChatzFM",
+            "url": "http://internal-dc:8000/skyChatz.mp3"
+        },
+        {
+            "name": "Slow Rock 90'",
+            "url": "http://internal-dc:8000/slowRock.mp3"
+        },
+        {
+            "name": "Suria fm",
+            "url": "http://internal-dc:8000/suria.mp3"
+        },
+        {
+            "name": "Terengganu FM",
+            "url": "http://internal-dc:8000/terengganu.mp3"
+        },
+        {
+            "name": "TraXXFM",
+            "url": "http://internal-dc:8000/traxx.mp3"
+        },
+        {
+            "name": "Wheelerz Net Radio",
+            "url": "http://internal-dc:8000/wFM.mp3"
+        },
+        {
+            "name": "WAI FM Bidayuh",
+            "url": "http://internal-dc:8000/wai-bidayuh.mp3"
+        },
+        {
+            "name": "WAI FM IBAN",
+            "url": "http://internal-dc:8000/wai-iban.mp3"
+        },
+        {
+            "name": "Zayan",
+            "url": "http://internal-dc:8000/zayan.mp3"
+        }
+    ]
+}
