@@ -32,7 +32,8 @@ def generate_compose():
     
     # Generate relay service for each station
     for env_file in env_files:
-        station_name = env_file.stem
+        station_name = env_file.stem.lower()
+        original_name = env_file.stem
         compose.append(f"""  relay-{station_name}:
     build:
       context: ./relay
@@ -43,7 +44,7 @@ def generate_compose():
         condition: service_healthy
     env_file:
       - ./.env
-      - ./relay/stations/{station_name}.env
+      - ./relay/stations/{original_name}.env
 """)
     
     return "\n".join(compose)
