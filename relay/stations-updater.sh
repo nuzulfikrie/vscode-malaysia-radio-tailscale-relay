@@ -117,20 +117,48 @@ EOF
     log_success "Created: ${filename}"
 }
 
-# Find station URL from radio-browser data
 find_station_url() {
     local station_data="$1"
     local search_name="$2"
     
-    # Use jq if available, otherwise fallback to grep/sed
-    if command -v jq &> /dev/null; then
-        echo "${station_data}" | jq -r --arg name "${search_name}" \
-            '.[] | select(.name | test($name; "i")) | select(.lastcheckok == 1) | .url_resolved' | head -1
-    else
-        # Fallback: parse JSON with grep/awk (basic)
-        echo "${station_data}" | grep -o '"name":"[^"]*'"${search_name}"'[^"]*"' -A 20 | \
-            grep -o '"url_resolved":"[^"]*"' | head -1 | sed 's/.*:"\(.*\)".*/\1/'
+    local python_cmd
+    if command -v python3 &> /dev/null; then
+        python_cmd="python3"
+    elif command -v python &> /dev/null; then
+        python_cmd="python"
     fi
+    
+    if [[ -n "${python_cmd}" ]]; then
+        local result
+        result=$(echo "${station_data}" | ${python_cmd} -c "
+import json
+import sys
+data = json.load(sys.stdin)
+search = '${search_name}'.lower()
+for station in data:
+    if station.get('lastcheckok') == 1:
+        name = station.get('name', '').lower()
+        if search in name:
+            print(station.get('url_resolved', ''))
+            break
+" 2>/dev/null)
+        if [[ -n "${result}" && "${result}" != "null" && "${result}" != "None" ]]; then
+            echo "${result}"
+            return 0
+        fi
+    fi
+    
+    # Fallback to grep/awk
+    local result
+    result=$(echo "${station_data}" | grep -i '"name":"[^"]*'"${search_name}"'[^"]*"' -A 20 2>/dev/null | \
+        grep '"url_resolved":"' | head -1 | sed 's/.*"url_resolved":"\([^"]*\)".*/\1/')
+    
+    if [[ -n "${result}" && "${result}" != "null" ]]; then
+        echo "${result}"
+        return 0
+    fi
+    
+    echo ""
 }
 
 # Update a single station from API
@@ -225,15 +253,22 @@ update_all_stations() {
     
     local updated=0
     local failed=0
+    local station_key
+    local station_name
+    local mount_path
+    local exit_code
     
     for station_key in "${!STATION_MAP[@]}"; do
-        local station_name="${STATION_MAP[$station_key]}"
-        local mount_path="/${station_key}.mp3"
+        station_name="${STATION_MAP[$station_key]}"
+        mount_path="/${station_key}.mp3"
+        exit_code=0
         
-        if update_station_from_api "${station_key}" "${station_name}" "${mount_path}" "${station_data}"; then
-            ((updated++))
+        update_station_from_api "${station_key}" "${station_name}" "${mount_path}" "${station_data}" || exit_code=$?
+        
+        if [[ ${exit_code} -eq 0 ]]; then
+            updated=$((updated + 1))
         else
-            ((failed++))
+            failed=$((failed + 1))
         fi
         echo ""
     done
