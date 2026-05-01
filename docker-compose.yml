@@ -16,6 +16,7 @@ services:
   relay-988:
     build:
       context: ./relay
+    image: relay-988:latest
     container_name: relay-988
     restart: unless-stopped
     depends_on:
@@ -28,6 +29,7 @@ services:
   relay-ai:
     build:
       context: ./relay
+    image: relay-ai:latest
     container_name: relay-ai
     restart: unless-stopped
     depends_on:
@@ -40,6 +42,7 @@ services:
   relay-asyik:
     build:
       context: ./relay
+    image: relay-asyik:latest
     container_name: relay-asyik
     restart: unless-stopped
     depends_on:
@@ -52,6 +55,7 @@ services:
   relay-bfm:
     build:
       context: ./relay
+    image: relay-bfm:latest
     container_name: relay-bfm
     restart: unless-stopped
     depends_on:
@@ -64,6 +68,7 @@ services:
   relay-ceritera:
     build:
       context: ./relay
+    image: relay-ceritera:latest
     container_name: relay-ceritera
     restart: unless-stopped
     depends_on:
@@ -76,6 +81,7 @@ services:
   relay-cityplus:
     build:
       context: ./relay
+    image: relay-cityplus:latest
     container_name: relay-cityplus
     restart: unless-stopped
     depends_on:
@@ -88,6 +94,7 @@ services:
   relay-delima:
     build:
       context: ./relay
+    image: relay-delima:latest
     container_name: relay-delima
     restart: unless-stopped
     depends_on:
@@ -100,6 +107,7 @@ services:
   relay-era-sarawak:
     build:
       context: ./relay
+    image: relay-era-sarawak:latest
     container_name: relay-era-sarawak
     restart: unless-stopped
     depends_on:
@@ -112,6 +120,7 @@ services:
   relay-era:
     build:
       context: ./relay
+    image: relay-era:latest
     container_name: relay-era
     restart: unless-stopped
     depends_on:
@@ -124,6 +133,7 @@ services:
   relay-fly:
     build:
       context: ./relay
+    image: relay-fly:latest
     container_name: relay-fly
     restart: unless-stopped
     depends_on:
@@ -136,6 +146,7 @@ services:
   relay-gegar:
     build:
       context: ./relay
+    image: relay-gegar:latest
     container_name: relay-gegar
     restart: unless-stopped
     depends_on:
@@ -148,6 +159,7 @@ services:
   relay-hitz:
     build:
       context: ./relay
+    image: relay-hitz:latest
     container_name: relay-hitz
     restart: unless-stopped
     depends_on:
@@ -160,6 +172,7 @@ services:
   relay-hot:
     build:
       context: ./relay
+    image: relay-hot:latest
     container_name: relay-hot
     restart: unless-stopped
     depends_on:
@@ -172,6 +185,7 @@ services:
   relay-ikim:
     build:
       context: ./relay
+    image: relay-ikim:latest
     container_name: relay-ikim
     restart: unless-stopped
     depends_on:
@@ -184,6 +198,7 @@ services:
   relay-ikimfm:
     build:
       context: ./relay
+    image: relay-ikimfm:latest
     container_name: relay-ikimfm
     restart: unless-stopped
     depends_on:
@@ -196,6 +211,7 @@ services:
   relay-ila:
     build:
       context: ./relay
+    image: relay-ila:latest
     container_name: relay-ila
     restart: unless-stopped
     depends_on:
@@ -208,6 +224,7 @@ services:
   relay-jei:
     build:
       context: ./relay
+    image: relay-jei:latest
     container_name: relay-jei
     restart: unless-stopped
     depends_on:
@@ -220,6 +237,7 @@ services:
   relay-kelantan:
     build:
       context: ./relay
+    image: relay-kelantan:latest
     container_name: relay-kelantan
     restart: unless-stopped
     depends_on:
@@ -232,6 +250,7 @@ services:
   relay-keningau:
     build:
       context: ./relay
+    image: relay-keningau:latest
     container_name: relay-keningau
     restart: unless-stopped
     depends_on:
@@ -244,6 +263,7 @@ services:
   relay-klasik:
     build:
       context: ./relay
+    image: relay-klasik:latest
     container_name: relay-klasik
     restart: unless-stopped
     depends_on:
@@ -256,6 +276,7 @@ services:
   relay-langkawi:
     build:
       context: ./relay
+    image: relay-langkawi:latest
     container_name: relay-langkawi
     restart: unless-stopped
     depends_on:
@@ -268,6 +289,7 @@ services:
   relay-lite:
     build:
       context: ./relay
+    image: relay-lite:latest
     container_name: relay-lite
     restart: unless-stopped
     depends_on:
@@ -280,6 +302,7 @@ services:
   relay-melody:
     build:
       context: ./relay
+    image: relay-melody:latest
     container_name: relay-melody
     restart: unless-stopped
     depends_on:
@@ -292,6 +315,7 @@ services:
   relay-mix:
     build:
       context: ./relay
+    image: relay-mix:latest
     container_name: relay-mix
     restart: unless-stopped
     depends_on:
@@ -304,6 +328,7 @@ services:
   relay-my:
     build:
       context: ./relay
+    image: relay-my:latest
     container_name: relay-my
     restart: unless-stopped
     depends_on:
@@ -316,6 +341,7 @@ services:
   relay-nasheed:
     build:
       context: ./relay
+    image: relay-nasheed:latest
     container_name: relay-nasheed
     restart: unless-stopped
     depends_on:
@@ -328,6 +354,7 @@ services:
   relay-nasional:
     build:
       context: ./relay
+    image: relay-nasional:latest
     container_name: relay-nasional
     restart: unless-stopped
     depends_on:
@@ -340,6 +367,7 @@ services:
   relay-pahang:
     build:
       context: ./relay
+    image: relay-pahang:latest
     container_name: relay-pahang
     restart: unless-stopped
     depends_on:
@@ -352,6 +380,7 @@ services:
   relay-raaga:
     build:
       context: ./relay
+    image: relay-raaga:latest
     container_name: relay-raaga
     restart: unless-stopped
     depends_on:
@@ -364,6 +393,7 @@ services:
   relay-sabah:
     build:
       context: ./relay
+    image: relay-sabah:latest
     container_name: relay-sabah
     restart: unless-stopped
     depends_on:
@@ -376,6 +406,7 @@ services:
   relay-sinar:
     build:
       context: ./relay
+    image: relay-sinar:latest
     container_name: relay-sinar
     restart: unless-stopped
     depends_on:
@@ -385,10 +416,11 @@ services:
       - ./.env
       - ./relay/stations/sinar.env
 
-  relay-skyChatz:
+  relay-skychatz:
     build:
       context: ./relay
-    container_name: relay-skyChatz
+    image: relay-skychatz:latest
+    container_name: relay-skychatz
     restart: unless-stopped
     depends_on:
       icecast:
@@ -397,10 +429,11 @@ services:
       - ./.env
       - ./relay/stations/skyChatz.env
 
-  relay-slowRock:
+  relay-slowrock:
     build:
       context: ./relay
-    container_name: relay-slowRock
+    image: relay-slowrock:latest
+    container_name: relay-slowrock
     restart: unless-stopped
     depends_on:
       icecast:
@@ -412,6 +445,7 @@ services:
   relay-suria:
     build:
       context: ./relay
+    image: relay-suria:latest
     container_name: relay-suria
     restart: unless-stopped
     depends_on:
@@ -424,6 +458,7 @@ services:
   relay-terengganu:
     build:
       context: ./relay
+    image: relay-terengganu:latest
     container_name: relay-terengganu
     restart: unless-stopped
     depends_on:
@@ -436,6 +471,7 @@ services:
   relay-traxx:
     build:
       context: ./relay
+    image: relay-traxx:latest
     container_name: relay-traxx
     restart: unless-stopped
     depends_on:
@@ -445,10 +481,11 @@ services:
       - ./.env
       - ./relay/stations/traxx.env
 
-  relay-wFM:
+  relay-wfm:
     build:
       context: ./relay
-    container_name: relay-wFM
+    image: relay-wfm:latest
+    container_name: relay-wfm
     restart: unless-stopped
     depends_on:
       icecast:
@@ -460,6 +497,7 @@ services:
   relay-wai-bidayuh:
     build:
       context: ./relay
+    image: relay-wai-bidayuh:latest
     container_name: relay-wai-bidayuh
     restart: unless-stopped
     depends_on:
@@ -472,6 +510,7 @@ services:
   relay-wai-iban:
     build:
       context: ./relay
+    image: relay-wai-iban:latest
     container_name: relay-wai-iban
     restart: unless-stopped
     depends_on:
@@ -484,6 +523,7 @@ services:
   relay-zayan:
     build:
       context: ./relay
+    image: relay-zayan:latest
     container_name: relay-zayan
     restart: unless-stopped
     depends_on:

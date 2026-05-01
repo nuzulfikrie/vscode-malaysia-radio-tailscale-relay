@@ -34,9 +34,11 @@ def generate_compose():
     for env_file in env_files:
         station_name = env_file.stem.lower()
         original_name = env_file.stem
+        image_name = f"relay-{station_name}"
         compose.append(f"""  relay-{station_name}:
     build:
       context: ./relay
+    image: {image_name}:latest
     container_name: relay-{station_name}
     restart: unless-stopped
     depends_on:
