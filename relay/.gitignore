@@ -1,0 +1,19 @@
+# Backups and cache
+.stations-backup/
+.cache/
+*.log
+
+# Temporary scripts (experimental)
+audioplus-parser.sh
+audioplus_scraper.py
+browser_capture.py
+capture_streams.sh
+capture_with_firefox.py
+extract_streams.py
+stream-extractor.md
+stream-sniffer.sh
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
