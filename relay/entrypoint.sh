@@ -22,6 +22,7 @@ exec ffmpeg \
   -hide_banner \
   -loglevel warning \
   -user_agent "Mozilla/5.0 (compatible; ffmpeg)" \
+  -follow_redirects 1 \
   -reconnect 1 \
   -reconnect_streamed 1 \
   -reconnect_on_network_error 1 \
@@ -35,6 +36,8 @@ exec ffmpeg \
   -content_type "${AUDIO_CONTENT_TYPE}" \
   -f "${AUDIO_FORMAT}" \
   -ice_name "${STATION_NAME}" \
+  -write_xing 0 \
+  -id3v2_version 0 \
   "icecast://${ICECAST_USER}:${ICECAST_SOURCE_PASSWORD}@${ICECAST_HOST}:${ICECAST_PORT}${MOUNT_PATH}"
 
 
