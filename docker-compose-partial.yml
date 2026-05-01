@@ -1,0 +1,57 @@
+services:
+  icecast:
+    image: libretime/icecast:2.4.4
+    container_name: radio-icecast
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./icecast/icecast.xml:/etc/icecast.xml:ro
+
+  relay-ikim:
+    build: ./relay
+    container_name: relay-ikim
+    restart: unless-stopped
+    env_file:
+      - ./.env
+      - ./relay/stations/ikim.env
+
+  relay-bfm:
+    build: ./relay
+    container_name: relay-bfm
+    restart: unless-stopped
+    env_file:
+      - ./.env
+      - ./relay/stations/bfm.env
+
+  relay-sinar:
+    build: ./relay
+    container_name: relay-sinar
+    restart: unless-stopped
+    env_file:
+      - ./.env
+      - ./relay/stations/sinar.env
+
+  relay-era:
+    build: ./relay
+    container_name: relay-era
+    restart: unless-stopped
+    env_file:
+      - ./.env
+      - ./relay/stations/era.env
+
+  relay-hot:
+    build: ./relay
+    container_name: relay-hot
+    restart: unless-stopped
+    env_file:
+      - ./.env
+      - ./relay/stations/hot.env
+
+  relay-zayan:
+    build: ./relay
+    container_name: relay-zayan
+    restart: unless-stopped
+    env_file:
+      - ./.env
+      - ./relay/stations/zayan.env
