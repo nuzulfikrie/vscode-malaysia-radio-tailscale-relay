@@ -13,17 +13,41 @@ services:
       timeout: 5s
       retries: 5
 
-  relay-ikim:
+  relay-988:
     build:
       context: ./relay
-    container_name: relay-ikim
+    container_name: relay-988
     restart: unless-stopped
     depends_on:
       icecast:
         condition: service_healthy
     env_file:
       - ./.env
-      - ./relay/stations/ikim.env
+      - ./relay/stations/988.env
+
+  relay-ai:
+    build:
+      context: ./relay
+    container_name: relay-ai
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/ai.env
+
+  relay-asyik:
+    build:
+      context: ./relay
+    container_name: relay-asyik
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/asyik.env
 
   relay-bfm:
     build:
@@ -37,17 +61,317 @@ services:
       - ./.env
       - ./relay/stations/bfm.env
 
-  relay-zayan:
+  relay-ceritera:
     build:
       context: ./relay
-    container_name: relay-zayan
+    container_name: relay-ceritera
     restart: unless-stopped
     depends_on:
       icecast:
         condition: service_healthy
     env_file:
       - ./.env
-      - ./relay/stations/zayan.env
+      - ./relay/stations/ceritera.env
+
+  relay-cityplus:
+    build:
+      context: ./relay
+    container_name: relay-cityplus
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/cityplus.env
+
+  relay-delima:
+    build:
+      context: ./relay
+    container_name: relay-delima
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/delima.env
+
+  relay-era-sarawak:
+    build:
+      context: ./relay
+    container_name: relay-era-sarawak
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/era-sarawak.env
+
+  relay-era:
+    build:
+      context: ./relay
+    container_name: relay-era
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/era.env
+
+  relay-fly:
+    build:
+      context: ./relay
+    container_name: relay-fly
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/fly.env
+
+  relay-gegar:
+    build:
+      context: ./relay
+    container_name: relay-gegar
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/gegar.env
+
+  relay-hitz:
+    build:
+      context: ./relay
+    container_name: relay-hitz
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/hitz.env
+
+  relay-hot:
+    build:
+      context: ./relay
+    container_name: relay-hot
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/hot.env
+
+  relay-ikim:
+    build:
+      context: ./relay
+    container_name: relay-ikim
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/ikim.env
+
+  relay-ikimfm:
+    build:
+      context: ./relay
+    container_name: relay-ikimfm
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/ikimfm.env
+
+  relay-ila:
+    build:
+      context: ./relay
+    container_name: relay-ila
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/ila.env
+
+  relay-jei:
+    build:
+      context: ./relay
+    container_name: relay-jei
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/jei.env
+
+  relay-kelantan:
+    build:
+      context: ./relay
+    container_name: relay-kelantan
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/kelantan.env
+
+  relay-keningau:
+    build:
+      context: ./relay
+    container_name: relay-keningau
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/keningau.env
+
+  relay-klasik:
+    build:
+      context: ./relay
+    container_name: relay-klasik
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/klasik.env
+
+  relay-langkawi:
+    build:
+      context: ./relay
+    container_name: relay-langkawi
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/langkawi.env
+
+  relay-lite:
+    build:
+      context: ./relay
+    container_name: relay-lite
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/lite.env
+
+  relay-melody:
+    build:
+      context: ./relay
+    container_name: relay-melody
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/melody.env
+
+  relay-mix:
+    build:
+      context: ./relay
+    container_name: relay-mix
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/mix.env
+
+  relay-my:
+    build:
+      context: ./relay
+    container_name: relay-my
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/my.env
+
+  relay-nasheed:
+    build:
+      context: ./relay
+    container_name: relay-nasheed
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/nasheed.env
+
+  relay-nasional:
+    build:
+      context: ./relay
+    container_name: relay-nasional
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/nasional.env
+
+  relay-pahang:
+    build:
+      context: ./relay
+    container_name: relay-pahang
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/pahang.env
+
+  relay-raaga:
+    build:
+      context: ./relay
+    container_name: relay-raaga
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/raaga.env
+
+  relay-sabah:
+    build:
+      context: ./relay
+    container_name: relay-sabah
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/sabah.env
 
   relay-sinar:
     build:
@@ -60,3 +384,111 @@ services:
     env_file:
       - ./.env
       - ./relay/stations/sinar.env
+
+  relay-skyChatz:
+    build:
+      context: ./relay
+    container_name: relay-skyChatz
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/skyChatz.env
+
+  relay-slowRock:
+    build:
+      context: ./relay
+    container_name: relay-slowRock
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/slowRock.env
+
+  relay-suria:
+    build:
+      context: ./relay
+    container_name: relay-suria
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/suria.env
+
+  relay-terengganu:
+    build:
+      context: ./relay
+    container_name: relay-terengganu
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/terengganu.env
+
+  relay-traxx:
+    build:
+      context: ./relay
+    container_name: relay-traxx
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/traxx.env
+
+  relay-wFM:
+    build:
+      context: ./relay
+    container_name: relay-wFM
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/wFM.env
+
+  relay-wai-bidayuh:
+    build:
+      context: ./relay
+    container_name: relay-wai-bidayuh
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/wai-bidayuh.env
+
+  relay-wai-iban:
+    build:
+      context: ./relay
+    container_name: relay-wai-iban
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/wai-iban.env
+
+  relay-zayan:
+    build:
+      context: ./relay
+    container_name: relay-zayan
+    restart: unless-stopped
+    depends_on:
+      icecast:
+        condition: service_healthy
+    env_file:
+      - ./.env
+      - ./relay/stations/zayan.env
